@@ -16,12 +16,16 @@ struct BeverageBarViewModel {
         beverageBar.prepare()
     }
     
+    func addZombieMatcha() {
+        beverageBar.prepare(beverageType: .zombieMatcha)
+    }
+    
     func getOrderTotal() -> String {
         return("Total: $\(beverageBar.processOrder())")
     }
     
     func getOrder() -> [(String, String)]? {
         let beverages = beverageBar.getOrderItems()
-        return beverages.map{ $0.map{ ("\($0.beverageType.name)", "$\($0.cost)") } }
+        return beverages.map{ $0.map{ ("\($0.beverageType.name)", "$\($0.cost)") } } //todo remove the name
     }
 }

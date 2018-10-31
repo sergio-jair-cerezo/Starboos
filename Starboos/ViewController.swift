@@ -3,6 +3,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var orderTableView: UITableView!
+    let viewModel = BeverageBarViewModel(beverageBar: BeverageBar())
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let order = viewModel.getOrder() else {
@@ -19,16 +20,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell!
     }
     
-    let viewModel = BeverageBarViewModel(beverageBar: BeverageBar())
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //set titles
     }
     
     @IBAction func addBeverage(_ sender: Any) {
         viewModel.addAction()
+        self.orderTableView.reloadData()
+    }
+    @IBAction func addMatchaZombie(_ sender: Any) {
+        viewModel.addZombieMatcha()
         self.orderTableView.reloadData()
     }
     
@@ -37,7 +39,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     private func presentTotalAlert() {
-        let alert = UIAlertController(title: "🎃Thanks for your Boosiness!s", message: "\(viewModel.getOrderTotal())" , preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "🎃Thanks for your Boosiness!", message: "\(viewModel.getOrderTotal())" , preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "PAY", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
