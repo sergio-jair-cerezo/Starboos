@@ -1,6 +1,6 @@
 import Foundation
 
-class Order {
+public class Order {
     private var beverages: [PreparedBeverage]
     
     public init() {
@@ -11,7 +11,7 @@ class Order {
         self.beverages.append(beverage)
     }
     
-    func checkout() -> Double {
+    public func checkout() -> Double {
         let total = self.beverages.map{$0.cost}.reduce(0.0, +)
         return total
     }

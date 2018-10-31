@@ -1,25 +1,19 @@
 import Foundation
 
-enum BeverageType {
-    case bloodyLatte, zombieMatcha
-}
-
-enum BeverageSize: Double {
-    case small = 1.0, medium = 1.5, large = 2.0
-}
-
-struct Beverage {
-    let style: BeverageType
+public struct MenuBeverage {
     let price: Double
+    
+    public init(price: Double = 4) {
+        self.price = price
+    }
 }
 
-struct PreparedBeverage {
-    let beverageType: Beverage
-    let size: BeverageSize
+public struct PreparedBeverage {
+    let beverageType: MenuBeverage
     
     var cost: Double {
         get {
-            return beverageType.price * size.rawValue
+            return beverageType.price
         }
     }
 }

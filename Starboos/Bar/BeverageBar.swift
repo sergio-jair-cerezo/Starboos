@@ -1,12 +1,9 @@
 import Foundation
 
-class BeverageBar {
-    var order: Order?
-    let beverages: [Beverage]
+public class BeverageBar {
+    private var order: Order?
     
-    public init(beverages: [Beverage]) {
-        self.beverages = beverages
-    }
+    public init(){}
     
     private func addBeverageToOrder(beverage: PreparedBeverage) {
         if let order = order {
@@ -17,8 +14,15 @@ class BeverageBar {
         }
     }
     
-    func prepare(beverage: Beverage, ofSize: BeverageSize) {
-        let prepared = PreparedBeverage(beverageType: beverage, size: ofSize)
+    public func prepare() {
+        let prepared = PreparedBeverage(beverageType:(MenuBeverage()))
         addBeverageToOrder(beverage: prepared)
+    }
+    
+    public func processOrder() -> Double {
+        guard let order = order else {
+            return 0
+        }
+        return order.checkout()
     }
 }
