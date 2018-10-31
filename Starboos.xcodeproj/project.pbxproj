@@ -21,6 +21,8 @@
 		CA5591FB218913D800E59BD6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5591F9218913D800E59BD6 /* Order.swift */; };
 		CA5591FD2189144700E59BD6 /* Beverages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5591FC2189144700E59BD6 /* Beverages.swift */; };
 		CA5591FE2189144700E59BD6 /* Beverages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5591FC2189144700E59BD6 /* Beverages.swift */; };
+		CADB4F03218977E70023670D /* BeveragesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB4F02218977E70023670D /* BeveragesTests.swift */; };
+		CADB4F05218982FD0023670D /* BeverageBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB4F04218982FD0023670D /* BeverageBarTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		CA5591F62189129000E59BD6 /* BeverageBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageBar.swift; sourceTree = "<group>"; };
 		CA5591F9218913D800E59BD6 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		CA5591FC2189144700E59BD6 /* Beverages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverages.swift; sourceTree = "<group>"; };
+		CADB4F02218977E70023670D /* BeveragesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeveragesTests.swift; sourceTree = "<group>"; };
+		CADB4F04218982FD0023670D /* BeverageBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageBarTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 			children = (
 				C4DC332221876E1300F8D4D3 /* StarboosTests.swift */,
 				C4DC332421876E1300F8D4D3 /* Info.plist */,
+				CADB4F02218977E70023670D /* BeveragesTests.swift */,
+				CADB4F04218982FD0023670D /* BeverageBarTests.swift */,
 			);
 			path = StarboosTests;
 			sourceTree = "<group>";
@@ -311,6 +317,8 @@
 				CA5591FB218913D800E59BD6 /* Order.swift in Sources */,
 				CA5591F82189129000E59BD6 /* BeverageBar.swift in Sources */,
 				CA5591FE2189144700E59BD6 /* Beverages.swift in Sources */,
+				CADB4F03218977E70023670D /* BeveragesTests.swift in Sources */,
+				CADB4F05218982FD0023670D /* BeverageBarTests.swift in Sources */,
 				C4DC332321876E1300F8D4D3 /* StarboosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

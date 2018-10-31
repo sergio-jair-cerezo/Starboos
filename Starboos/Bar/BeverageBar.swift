@@ -14,8 +14,8 @@ public class BeverageBar {
         }
     }
     
-    public func prepare() {
-        let prepared = PreparedBeverage(beverageType:(MenuBeverage()))
+    public func prepare(beverageOfType: BeverageType) {
+        let prepared = PreparedBeverage(beverageType:(MenuBeverage(beverageType: beverageOfType)))
         addBeverageToOrder(beverage: prepared)
     }
     

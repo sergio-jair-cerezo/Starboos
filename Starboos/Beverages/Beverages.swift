@@ -1,10 +1,25 @@
 import Foundation
 
+public enum BeverageType {
+    case bloodyLatte, zombieMatcha
+}
+
 public struct MenuBeverage {
-    let price: Double
+    let beverageType: BeverageType
     
-    public init(price: Double = 4) {
-        self.price = price
+    public init(beverageType: BeverageType = .bloodyLatte) {
+        self.beverageType = beverageType
+    }
+    
+    public var price: Double {
+        get {
+            switch(beverageType) {
+                case .bloodyLatte:
+                    return 4.0
+                case .zombieMatcha:
+                    return 4.99
+            }
+        }
     }
 }
 
