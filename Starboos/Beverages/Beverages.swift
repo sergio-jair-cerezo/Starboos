@@ -2,9 +2,10 @@ import Foundation
 
 public struct MenuBeverage {
     let price: Double
-    
-    public init(price: Double = 4) {
+    let name: String
+    public init(price: Double = 4, name: String = "bloodyLatte") {
         self.price = price
+        self.name = name
     }
 }
 

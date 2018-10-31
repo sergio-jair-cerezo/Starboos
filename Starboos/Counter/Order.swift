@@ -1,18 +1,22 @@
 import Foundation
 
 public class Order {
-    private var beverages: [PreparedBeverage]
+    private var _beverages: [PreparedBeverage]
     
     public init() {
-        self.beverages = [PreparedBeverage]()
+        _beverages = [PreparedBeverage]()
     }
     
     func add(_ beverage: PreparedBeverage) {
-        self.beverages.append(beverage)
+        _beverages.append(beverage)
     }
     
     public func checkout() -> Double {
-        let total = self.beverages.map{$0.cost}.reduce(0.0, +)
+        let total = _beverages.map{$0.cost}.reduce(0.0, +)
         return total
+    }
+    
+    func getBeverages() -> [PreparedBeverage] {
+        return _beverages
     }
 }

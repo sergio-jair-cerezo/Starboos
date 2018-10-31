@@ -1,16 +1,16 @@
 import Foundation
 
 public class BeverageBar {
-    private var order: Order?
+    private var _order: Order?
     
     public init(){}
     
     private func addBeverageToOrder(beverage: PreparedBeverage) {
-        if let order = order {
+        if let order = _order {
             order.add(beverage)
         } else {
-            self.order = Order()
-            self.order?.add(beverage)
+            self._order = Order()
+            self._order?.add(beverage)
         }
     }
     
@@ -20,9 +20,13 @@ public class BeverageBar {
     }
     
     public func processOrder() -> Double {
-        guard let order = order else {
+        guard let order = _order else {
             return 0
         }
         return order.checkout()
+    }
+    
+    public func getOrderItems() -> [PreparedBeverage]? {
+        return _order?.getBeverages()
     }
 }
